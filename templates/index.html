@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Tweet Intent Analysis</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='/style.css') }}">
+</head>
+<body>
+<div align="center">
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    Tweet Intent Analysis
+    <br>
+    <br>
+    <br>
+    <form action="{{ url_for('predict')}}"method="post">
+    	<input type="text" name="tweet" placeholder="tweet" required="required" size="20"/>
+        <br><br>
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+
+    <br>
+   <br>
+   {{ prediction }}
+
+ </div>
+</body>
+</html>
