@@ -59,8 +59,8 @@ def input_fun(text):
  return text
 
 ## Loading model files
-with open('rfl.pkl', 'rb') as rf_model_file:
- rf = pickle.load(rf_model_file)
+#with open('rfl.pkl', 'rb') as rf_model_file:
+ #rf = pickle.load(rf_model_file)
 
 with open('svc.pkl', 'rb') as svc_model_file:
  svc = pickle.load(svc_model_file)
@@ -81,7 +81,7 @@ def preprocess_predict(text):
  l_tokens = lemming(tokens)
  vector = tfidf_vectorizer.transform(l_tokens)
  output = []
- output.append(le.inverse_transform(rf.predict(vector))[0])
+ #output.append(le.inverse_transform(rf.predict(vector))[0])
  output.append(le.inverse_transform(svc.predict(vector))[0])
  output.append(le.inverse_transform(logreg.predict(vector))[0])
  y_out = mode(output)
