@@ -13,7 +13,6 @@ jobs:
         run: env
       - name: Example Step
         run: |
-          ls -al ${{ github.workspace }}
-          ls ${{github.workspace}}
+          ls -l ${{ github.workspace }}
           
       
