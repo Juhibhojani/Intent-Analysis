@@ -14,6 +14,6 @@ jobs:
       - name: Example Step
         run: |
           ls -al ${{ github.workspace }}
-          ls ${{github.workspace}}/app.py
+          ls ${{github.workspace}}
           
       
