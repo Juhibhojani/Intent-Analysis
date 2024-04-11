@@ -14,6 +14,6 @@ jobs:
       - name: Example Step
         run: |
           ls -l ${{ github.workspace }}
-          ls -l ${{ github.workspace }}/static
+          ls -l ${{ github.workspace }}/src
           
       
